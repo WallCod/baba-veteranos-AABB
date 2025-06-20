@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campeões - Baba Veteranos AABB</title>
+    <!-- Inclui o Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inclui seu arquivo de estilos personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 md:p-8" style="background-image: url('/img/bg.jpg'); background-size: cover; background-position: center;">
+    <div class="max-w-4xl mx-auto p-6 md:p-8">
+        <!-- Conteúdo fora dos quadros dos campeões com fundo semi-transparente -->
+        <div class="bg-white bg-opacity-80 shadow-lg rounded-xl p-6 md:p-8">
+            <!-- Botões de navegação -->
+            <div class="text-center mb-6 space-x-4">
+                <a href="index.html" class="inline-block bg-gray-200 text-gray-800 px-6 py-2 rounded-lg shadow-md hover:bg-lime-300 transition duration-300 ease-in-out hover-scale focus:outline-none focus:ring-2 focus:ring-gray-400">
+                    Home
+                </a>
+                <a href="tournaments.html" class="inline-block bg-lime-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-lime-700 transition duration-300 ease-in-out hover-scale focus:outline-none focus:ring-2 focus:ring-lime-400">
+                    Torneios
+                </a>
+                <button id="nav-champions" class="inline-block bg-lime-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-lime-700 transition duration-300 ease-in-out hover-scale focus:outline-none focus:ring-2 focus:ring-lime-400" disabled>
+                    Campeões
+                </button>
+                <a href="about.html" class="inline-block bg-lime-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-lime-700 transition duration-300 ease-in-out hover-scale focus:outline-none focus:ring-2 focus:ring-lime-400">
+                    Sobre
+                </a>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-center text-blue-800 mb-8">Campeões - Baba Veteranos AABB</h1>
+        </div>
+
+        <!-- Conteúdo dos Campeões (mantidos com fundo bg-gray-50) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            <!-- Exemplo de Campeão - Edição 2023 -->
+            <div class="bg-gray-50 p-4 rounded-lg shadow-md flex flex-col items-center">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">2023</h3>
+                <img src="/img/2023.jpeg" alt="Time Campeão 2023" class="rounded-lg mb-2 shadow-sm w-full h-auto max-w-xs clickable-image">
+                <p class="text-center text-gray-700">Campeão - Milan 🏆</p>
+            </div>
+            <!-- Exemplo de Campeão - Edição 2022 -->
+            <div class="bg-gray-50 p-4 rounded-lg shadow-md flex flex-col items-center">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">2024 - Edição 1</h3>
+                <img src="/img/" alt="CADÊ" class="rounded-lg mb-2 shadow-sm w-full h-auto max-w-xs clickable-image">
+                <p class="text-center text-gray-700">Campeão - Mengão 🏆</p>
+            </div>
+            <!-- Exemplo de Campeão - Edição 2024 -->
+            <div class="bg-gray-50 p-4 rounded-lg shadow-md flex flex-col items-center">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">2024 - Edição 2</h3>
+                <img src="/img/2024 1.jpeg" alt="Time Campeão 2024" class="rounded-lg mb-2 shadow-sm w-full h-auto max-w-xs clickable-image">
+                <p class="text-center text-gray-700">Campeão - Santastico de Madrid 🏆</p>
+            </div>
+            <!-- Exemplo de Campeão - Edição 2025 -->
+            <div class="bg-gray-50 p-4 rounded-lg shadow-md flex flex-col items-center">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">2025 - Edição 1</h3>
+                <img src="/img/2025 1.jpeg" alt="Time Campeão 2025" class="rounded-lg mb-2 shadow-sm w-full h-auto max-w-xs clickable-image">
+                <p class="text-center text-gray-700">Campeão - Tadafilados FC 🏆</p>
+            </div>
+            <!-- Exemplo de Campeão - Edição 2025 -->
+            <div class="bg-gray-50 p-4 rounded-lg shadow-md flex flex-col items-center">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">2025 - Edição 2</h3>
+                <img src="https://placehold.co/300x200/FF5722/FFFFFF?text=...+Loading+..." alt="Time Campeão 2019" class="rounded-lg mb-2 shadow-sm w-full h-auto max-w-xs clickable-image">
+                <p class="text-center text-gray-700">...Loading... 🏆</p>
+            </div>
+        </div>
+
+        <!-- Rodapé com fundo semi-transparente -->
+        <div>
+            <p class="footer">
+                Desenvolvido por: <a href="https://alphalabs.lat/" target="_blank" rel="noopener noreferrer" class="footerdev">AlphaLabs</a>
+                <span class="lion" aria-hidden="true">🦁</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal de Imagem (oculto por padrão) -->
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden p-4">
+        <div class="relative max-w-full max-h-[90vh] flex items-center justify-center">
+            <button id="close-modal" class="absolute -top-4 right-0 md:-top-8 md:-right-8 text-white text-3xl font-bold px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-800 transition duration-300 ease-in-out hover-scale">×</button>
+            <img id="modal-image" src="" alt="Imagem em tela cheia" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-xl border-4 border-white">
+        </div>
+    </div>
+    <!-- Inclui seu arquivo de scripts principal -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+/* Define a fonte Inter globalmente para o corpo do documento */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    /* bg-gray-100 */
+    color: #374151;
+}
+
+/* Estilos para a tabela de gols, garantindo que as linhas vazias sejam visíveis */
+.faltas-table td {
+    min-height: 2rem;
+    /* Altura mínima para cada célula, dando espaço para preenchimento */
+}
+
+/* Ajuste para células da tabela de gols para alinhamento e padding */
+.faltas-table th,
+.faltas-table td {
+    padding: 0.5rem;
+    /* p-2 */
+    border: 1px solid #d1d5db;
+    /* border border-gray-300 */
+}
+
+/* Estilo para as colunas de falta */
+.faltas-col {
+    width: 100px;
+    /* Largura fixa para as colunas de falta */
+    text-align: center;
+    /* Centraliza o texto nas colunas de falta */
+}
+
+/* Estilos para a página de entrada (landing page) */
+.landing-page {
+    /* Imagem de fundo de um estádio de futebol aleatória via Unsplash */
+    background-image: url('/img/bg.jpg');
+    background-size: cover;
+    /* A imagem cobre todo o elemento */
+    background-position: center;
+    /* Centraliza a imagem */
+    min-height: 100vh;
+    /* Ocupa a altura total da viewport */
+    display: flex;
+    /* Para centralizar o conteúdo vertical e horizontalmente */
+    flex-direction: column;
+    /* Organiza os itens em coluna */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    position: relative;
+    /* Para a sobreposição */
+}
+
+.landing-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* Sobreposição escura para melhorar a legibilidade do texto */
+    z-index: 1;
+    /* Garante que a sobreposição fique abaixo do texto */
+}
+
+.footer {
+    position: relative;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    z-index: 3;
+}
+
+.footerdev {
+    color: #0ff792;
+    z-index: 3;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footerdev:hover {
+    color: #62f0c5;
+    transform: scale(1.1);
+}
+
+.lion {
+    z-index: 3;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.lion:hover {
+    transform: scale(1.1);
+    /* Aumenta o tamanho da imagem do leão no hover */
+}
+
+.footerindex {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    z-index: 3;
+}
+
+.final {
+    width: 30%;
+    color: rgb(244, 243, 241);
+    text-align: center;
+    font-size: 25px;
+    transition: all 0.3s ease;
+    background-color: #374151c8;
+    border: 1px solid #f9f7f3;
+    border-radius: 10px;
+    padding: 1px;
+    margin: 5px 5px;
+    position: relative;
+}
+.final:hover {
+    transform: scale(1.05);
+    /* Aumenta o tamanho do elemento final no hover */
+    background-color: #4b5563;
+    /* Muda a cor de fundo no hover */
+    color: #f9f7f3;
+    /* Muda a cor do texto no hover */
+}
+
+.campeon {
+    width: 60%;
+    height: 100px;
+    margin: 20px auto; /* Centraliza horizontalmente */
+    color: linear-gradient(to right, #ffd700, #fff8dc); /* apenas para referência, o dourado será aplicado diretamente no HTML */
+    text-align: center;
+    font-size: 40px;
+    background-color: rgba(225, 218, 218, 0.25); /* branco translúcido */
+    border: 1px solid #ffd700; /* dourado */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px); /* efeito glassmorphism */
+animation: balanco 2s ease-in-out infinite;
+}
+.campeon:hover {
+    transform: scale(1.05);
+    background-color: #4b5563;
+    color: #f9f7f3;
+
+}
+@keyframes balanco {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
+    75% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.landing-content {
+    position: relative;
+    /* Garante que o conteúdo fique acima da sobreposição */
+    z-index: 2;
+    color: white;
+    /* Cor do texto para contraste */
+    text-align: center;
+}
+
+/* Animação de balanço para o título */
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    15% {
+        transform: rotate(5deg);
+    }
+
+    30% {
+        transform: rotate(-5deg);
+    }
+
+    45% {
+        transform: rotate(3deg);
+    }
+
+    60% {
+        transform: rotate(-3deg);
+    }
+
+    75% {
+        transform: rotate(1deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.swing-text {
+    animation: swing 2s ease-in-out infinite;
+    /* Aplica a animação ao título */
+    display: inline-block;
+    /* Necessário para a animação de rotação */
+}
+
+/* Animação de zoom para a bola */
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.ball-animation {
+    animation: zoom 1.5s ease-in-out infinite;
+    /* Aplica a animação à bola */
+    display: inline-block;
+    /* Necessário para a animação de escala */
+}
+
+/* Efeito de aproximação (scale) no hover para botões */
+.hover-scale:hover {
+    transform: scale(1.05);
+    /* Aumenta ligeiramente o tamanho no hover */
+}
+
+/* Estilo para imagens clicáveis */
+.clickable-image {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.clickable-image:hover {
+    transform: scale(1.02);
+}
+
+/* Estilos para botões desabilitados */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Classes para cores de botões personalizadas */
+.bg-lime-600 {
+    background-color: #44620d;
+    /* Um tom de verde grama */
+}
+
+.hover\:bg-lime-700:hover {
+    background-color: #5c840c;
+    /* Um tom mais escuro no hover */
+}
+
+.focus\:ring-lime-300:focus {
+    box-shadow: 0 0 0 4px rgba(109, 159, 16, 0.5);
+    /* Anel de foco verde */
+}
+
+.hover\:bg-lime-300:hover {
+    background-color: #bbf7d0;
+    /* tom de verde claro para o hover dos botões cinzas */
+}
