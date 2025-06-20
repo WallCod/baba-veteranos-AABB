@@ -1,54 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
 /* Define a fonte Inter globalmente para o corpo do documento */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f3f4f6;
-    /* bg-gray-100 */
+    background-color: #f3f4f6; /* bg-gray-100 */
     color: #374151;
 }
 
 /* Estilos para a tabela de gols, garantindo que as linhas vazias sejam visíveis */
 .faltas-table td {
     min-height: 2rem;
-    /* Altura mínima para cada célula, dando espaço para preenchimento */
 }
 
 /* Ajuste para células da tabela de gols para alinhamento e padding */
 .faltas-table th,
 .faltas-table td {
-    padding: 0.5rem;
-    /* p-2 */
-    border: 1px solid #d1d5db;
-    /* border border-gray-300 */
+    padding: 0.5rem; /* p-2 */
+    border: 1px solid #d1d5db; /* border border-gray-300 */
 }
 
 /* Estilo para as colunas de falta */
 .faltas-col {
-    width: 100px;
-    /* Largura fixa para as colunas de falta */
+    max-width: 20vw;
+    min-width: 60px;
     text-align: center;
-    /* Centraliza o texto nas colunas de falta */
 }
 
 /* Estilos para a página de entrada (landing page) */
 .landing-page {
-    /* Imagem de fundo de um estádio de futebol aleatória via Unsplash */
     background-image: url('/img/bg.jpg');
     background-size: cover;
-    /* A imagem cobre todo o elemento */
     background-position: center;
-    /* Centraliza a imagem */
     min-height: 100vh;
-    /* Ocupa a altura total da viewport */
     display: flex;
-    /* Para centralizar o conteúdo vertical e horizontalmente */
     flex-direction: column;
-    /* Organiza os itens em coluna */
     justify-content: center;
-    /* Centraliza verticalmente */
     align-items: center;
-    /* Centraliza horizontalmente */
     position: relative;
-    /* Para a sobreposição */
 }
 
 .landing-page::before {
@@ -59,19 +49,18 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.6);
-    /* Sobreposição escura para melhorar a legibilidade do texto */
     z-index: 1;
-    /* Garante que a sobreposição fique abaixo do texto */
 }
 
+/* Estilos do rodapé */
 .footer {
     position: relative;
-    top: 35px;
-    left: 0;
+    top: 2rem;
     width: 100%;
     color: white;
     text-align: center;
     z-index: 3;
+    padding: 0.5rem;
 }
 
 .footerdev {
@@ -94,24 +83,24 @@ body {
 
 .lion:hover {
     transform: scale(1.1);
-    /* Aumenta o tamanho da imagem do leão no hover */
 }
 
 .footerindex {
     position: fixed;
-    bottom: 10px;
-    left: 0;
+    bottom: 1rem;
     width: 100%;
     color: white;
     text-align: center;
     z-index: 3;
+    padding: 0.5rem;
 }
 
+/* Estilos para títulos de jogos */
 .final {
-    width: 30%;
+    width: 30%; /* Valor original */
     color: rgb(244, 243, 241);
     text-align: center;
-    font-size: 25px;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
     background-color: #374151c8;
     border: 1px solid #f9f7f3;
@@ -120,39 +109,39 @@ body {
     margin: 5px 5px;
     position: relative;
 }
+
 .final:hover {
     transform: scale(1.05);
-    /* Aumenta o tamanho do elemento final no hover */
     background-color: #4b5563;
-    /* Muda a cor de fundo no hover */
     color: #f9f7f3;
-    /* Muda a cor do texto no hover */
 }
 
+/* Estilos para o elemento de campeão */
 .campeon {
-    width: 60%;
-    height: 100px;
-    margin: 20px auto; /* Centraliza horizontalmente */
-    color: linear-gradient(to right, #ffd700, #fff8dc); /* apenas para referência, o dourado será aplicado diretamente no HTML */
+    width: 60%; /* Valor original */
+    height: 100px; /* Valor original */
+    margin: 20px auto;
+    color: #ffd700; /* Cor dourada direta */
     text-align: center;
-    font-size: 40px;
-    background-color: rgba(225, 218, 218, 0.25); /* branco translúcido */
-    border: 1px solid #ffd700; /* dourado */
+    font-size: 40px; /* Valor original */
+    background-color: rgba(225, 218, 218, 0.25);
+    border: 1px solid #ffd700;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease;
-    backdrop-filter: blur(4px); /* efeito glassmorphism */
-animation: balanco 2s ease-in-out infinite;
+    backdrop-filter: blur(4px);
+    animation: balanco 2s ease-in-out infinite;
 }
+
 .campeon:hover {
     transform: scale(1.05);
     background-color: #4b5563;
     color: #f9f7f3;
-
 }
+
 @keyframes balanco {
     0% { transform: rotate(0deg); }
     25% { transform: rotate(3deg); }
@@ -161,79 +150,45 @@ animation: balanco 2s ease-in-out infinite;
     100% { transform: rotate(0deg); }
 }
 
+/* Estilos para o conteúdo da landing page */
 .landing-content {
     position: relative;
-    /* Garante que o conteúdo fique acima da sobreposição */
     z-index: 2;
     color: white;
-    /* Cor do texto para contraste */
     text-align: center;
 }
 
 /* Animação de balanço para o título */
 @keyframes swing {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    15% {
-        transform: rotate(5deg);
-    }
-
-    30% {
-        transform: rotate(-5deg);
-    }
-
-    45% {
-        transform: rotate(3deg);
-    }
-
-    60% {
-        transform: rotate(-3deg);
-    }
-
-    75% {
-        transform: rotate(1deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(5deg); }
+    30% { transform: rotate(-5deg); }
+    45% { transform: rotate(3deg); }
+    60% { transform: rotate(-3deg); }
+    75% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
 }
 
 .swing-text {
     animation: swing 2s ease-in-out infinite;
-    /* Aplica a animação ao título */
     display: inline-block;
-    /* Necessário para a animação de rotação */
 }
 
 /* Animação de zoom para a bola */
 @keyframes zoom {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 .ball-animation {
     animation: zoom 1.5s ease-in-out infinite;
-    /* Aplica a animação à bola */
     display: inline-block;
-    /* Necessário para a animação de escala */
 }
 
-/* Efeito de aproximação (scale) no hover para botões */
+/* Efeito de aproximação no hover para botões */
 .hover-scale:hover {
     transform: scale(1.05);
-    /* Aumenta ligeiramente o tamanho no hover */
 }
 
 /* Estilo para imagens clicáveis */
@@ -255,20 +210,184 @@ button:disabled {
 /* Classes para cores de botões personalizadas */
 .bg-lime-600 {
     background-color: #44620d;
-    /* Um tom de verde grama */
 }
 
 .hover\:bg-lime-700:hover {
     background-color: #5c840c;
-    /* Um tom mais escuro no hover */
 }
 
 .focus\:ring-lime-300:focus {
     box-shadow: 0 0 0 4px rgba(109, 159, 16, 0.5);
-    /* Anel de foco verde */
 }
 
 .hover\:bg-lime-300:hover {
     background-color: #bbf7d0;
-    /* tom de verde claro para o hover dos botões cinzas */
+}
+
+/* Estilos para navegação */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.nav-buttons a,
+.nav-buttons button {
+    min-width: 120px;
+    max-width: 180px;
+    text-align: center;
+    padding: 0.75rem 2rem;
+    margin: 0 0.25rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Media Queries para Responsividade */
+
+/* Telas pequenas (móveis, ≤640px) */
+@media (max-width: 640px) {
+    .faltas-table th,
+    .faltas-table td {
+        padding: 0.25rem;
+        font-size: 0.875rem;
+    }
+
+    .faltas-col {
+        max-width: 25vw;
+        min-width: 50px;
+    }
+
+    .final {
+        width: 100%;
+        max-width: 300px;
+        font-size: 1.25rem;
+        padding: 0.2rem;
+        margin: 0.3rem auto;
+    }
+
+    .campeon {
+        width: 90%;
+        max-width: 600px;
+        height: 50px;
+        font-size: 1.25rem;
+        margin: 0.5rem auto;
+        background-color: rgba(255, 255, 255, 0.3);
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+        animation: balanco 3s ease-in-out infinite;
+    }
+
+    .footer, .footerindex {
+        font-size: 0.875rem;
+        padding: 0.25rem;
+        bottom: 0.5rem;
+    }
+
+    .landing-page {
+        padding: 1rem;
+    }
+
+    .swing-text {
+        animation: swing 3s ease-in-out infinite;
+    }
+
+    .ball-animation {
+        animation: none;
+    }
+
+    .nav-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+
+    .nav-buttons a,
+    .nav-buttons button {
+        position: relative;
+        font-size: 0.875rem;
+        min-width: 150px;
+        max-width: 110px;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        display: flex;
+    }
+}
+
+/* Telas médias (tablets, 641px–1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .faltas-table th,
+    .faltas-table td {
+        padding: 0.375rem;
+        font-size: 1rem;
+    }
+
+    .final {
+        width: 100%;
+        max-width: 250px;
+        font-size: 1.375rem;
+    }
+
+    .campeon {
+        width: 90%;
+        max-width: 600px;
+        height: 70px;
+        font-size: 1.75rem;
+        text-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
+    }
+
+    .footer, .footerindex {
+        font-size: 1rem;
+    }
+
+    .nav-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .nav-buttons a,
+    .nav-buttons button {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+        min-width: 100px;
+        max-width: 130px;
+    }
+}
+
+/* Telas grandes (desktops, >1024px) */
+@media (min-width: 1025px) {
+    .faltas-table th,
+    .faltas-table td {
+        padding: 0.5rem;
+        font-size: 1.125rem;
+    }
+
+    .final {
+        width: 30%;
+        font-size: 1.5rem;
+        padding: 1px;
+        margin: 5px 5px;
+    }
+
+    .campeon {
+        width: 60%;
+        height: 100px;
+        font-size: 40px;
+        margin: 20px auto;
+    }
+
+    .footer, .footerindex {
+        font-size: 1rem;
+    }
+
+    .nav-buttons a,
+    .nav-buttons button {
+        font-size: 1.125rem;
+        padding: 0.75rem 2rem;
+        min-width: 120px;
+        max-width: 180px;
+    }
 }
