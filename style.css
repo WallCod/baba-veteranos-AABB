@@ -30,7 +30,7 @@ body {
 
 /* Estilos para a página de entrada (landing page) */
 .landing-page {
-    background-image: url('/img/bg.jpg');
+    background-image: url('img/bg.jpg');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
