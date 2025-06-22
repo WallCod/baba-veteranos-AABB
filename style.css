@@ -30,7 +30,7 @@ body {
 
 /* Estilos para a página de entrada (landing page) */
 .landing-page {
-    background-image: url('img/bg.jpg');
+    background-image: url('img/bg.webp');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -245,74 +245,38 @@ button:disabled {
 
 /* Media Queries para Responsividade */
 
-/* Telas pequenas (móveis, ≤640px) */
-@media (max-width: 640px) {
+/* Telas grandes (desktops, >1024px) */
+@media (min-width: 1025px) {
     .faltas-table th,
     .faltas-table td {
-        padding: 0.25rem;
-        font-size: 0.875rem;
-    }
-
-    .faltas-col {
-        max-width: 25vw;
-        min-width: 50px;
+        padding: 0.5rem;
+        font-size: 1.125rem;
     }
 
     .final {
-        width: 100%;
-        max-width: 300px;
-        font-size: 1.25rem;
-        padding: 0.2rem;
-        margin: 0.3rem auto;
+        width: 30%;
+        font-size: 1.5rem;
+        padding: 1px;
+        margin: 5px 5px;
     }
 
     .campeon {
-        width: 90%;
-        max-width: 600px;
-        height: 50px;
-        font-size: 1.25rem;
-        margin: 0.5rem auto;
-        background-color: rgba(255, 255, 255, 0.3);
-        text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
-        animation: balanco 3s ease-in-out infinite;
+        width: 60%;
+        height: 100px;
+        font-size: 40px;
+        margin: 20px auto;
     }
 
     .footer, .footerindex {
-        font-size: 0.875rem;
-        padding: 0.25rem;
-        bottom: 0.5rem;
-    }
-
-    .landing-page {
-        padding: 1rem;
-    }
-
-    .swing-text {
-        animation: swing 3s ease-in-out infinite;
-    }
-
-    .ball-animation {
-        animation: none;
-    }
-
-    .nav-buttons {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
+        font-size: 1rem;
     }
 
     .nav-buttons a,
     .nav-buttons button {
-        position: relative;
-        font-size: 0.875rem;
-        min-width: 150px;
-        max-width: 110px;
-        margin: 0;
-        align-items: center;
-        justify-content: center;
-        padding: 0.5rem 1rem;
-        text-align: center;
-        display: flex;
+        font-size: 1.125rem;
+        padding: 0.75rem 2rem;
+        min-width: 120px;
+        max-width: 180px;
     }
 }
 
@@ -357,37 +321,74 @@ button:disabled {
     }
 }
 
-/* Telas grandes (desktops, >1024px) */
-@media (min-width: 1025px) {
+/* Telas pequenas (móveis, ≤640px) */
+@media (max-width: 640px) {
     .faltas-table th,
     .faltas-table td {
-        padding: 0.5rem;
-        font-size: 1.125rem;
+        padding: 0.25rem;
+        font-size: 0.875rem;
+    }
+
+    .faltas-col {
+        max-width: 25vw;
+        min-width: 50px;
     }
 
     .final {
-        width: 30%;
-        font-size: 1.5rem;
-        padding: 1px;
-        margin: 5px 5px;
+        width: 100%;
+        max-width: 300px;
+        font-size: 1.25rem;
+        padding: 0.2rem;
+        margin: 0.3rem auto;
     }
 
     .campeon {
-        width: 60%;
-        height: 100px;
-        font-size: 40px;
-        margin: 20px auto;
+        width: 90%;
+        max-width: 600px;
+        height: 50px;
+        font-size: 1.10rem;
+        position: relative;
+        margin: 0.5rem auto;
+        background-color: rgba(255, 255, 255, 0.3);
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+        animation: balanco 3s ease-in-out infinite;
     }
 
     .footer, .footerindex {
-        font-size: 1rem;
+        font-size: 0.875rem;
+        padding: 0.25rem;
+        bottom: 0.5rem;
+    }
+
+    .landing-page {
+        padding: 1rem;
+    }
+
+    .swing-text {
+        animation: swing 3s ease-in-out infinite;
+    }
+
+    .ball-animation {
+        animation: none;
+    }
+
+    .nav-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
     }
 
     .nav-buttons a,
     .nav-buttons button {
-        font-size: 1.125rem;
-        padding: 0.75rem 2rem;
-        min-width: 120px;
-        max-width: 180px;
+        position: relative;
+        font-size: 0.875rem;
+        min-width: 150px;
+        max-width: 110px;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        display: flex;
     }
 }
